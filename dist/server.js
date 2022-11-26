@@ -22,7 +22,7 @@ app.register(fastifyCors, {
 app.register(carRoutes_1.default);
 app.register(cartRoutes_1.default);
 app.register(orderRoutes_1.default);
-app.listen({ port: Number(process.env.PORT) || 3001 }, function (err, address) {
+app.listen({ port: Number(process.env.PORT) || 3001, host: '127.0.0.1' }, function (err, address) {
     if (err) {
         app.log.error(err);
         process.exit(1);
