@@ -5,7 +5,7 @@
   "main": "/dist/server.js",
   "scripts": {
     "buildts": "tsc --watch -p tsconfig.json",
-    "start": "node ./dist/server.js",
+    "start": "node ./dist/server.js -p $PORT",
     "dev": "nodemon ./dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
