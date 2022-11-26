@@ -18,6 +18,7 @@ async function connectToDB() {
 app.register(fastifyCors, {
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 });
 app.register(carRoutes_1.default);
 app.register(cartRoutes_1.default);

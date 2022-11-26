@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 export interface ICart {
-    _id: string;
+    _id: string,
     name: string,
     maker: string,
     car_price: number,
@@ -27,7 +27,5 @@ const cartSchema = new Schema<ICart>({
 })
 
 export const Cart =  model<ICart>("Cart", cartSchema);
-
-
 
 
