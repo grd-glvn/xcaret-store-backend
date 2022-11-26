@@ -24,7 +24,7 @@ app.register(orderRoute)
 
 
 
-app.listen({ port: Number(process.env.PORT) || 3001 }, function(err: Error| null, address: String) {
+app.listen({ port: Number(process.env.PORT) || 3001, host: '127.0.0.1'}, function(err: Error| null, address: String) {
     if (err) {
         app.log.error(err)
         process.exit(1)
