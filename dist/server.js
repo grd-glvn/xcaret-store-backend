@@ -10,7 +10,19 @@ const carRoutes_1 = __importDefault(require("./routes/carRoutes"));
 const cartRoutes_1 = __importDefault(require("./routes/cartRoutes"));
 const orderRoutes_1 = __importDefault(require("./routes/orderRoutes"));
 require('dotenv').config();
-const app = (0, fastify_1.default)({ logger: true });
+const app = (0, fastify_1.default)({
+    logger: true,
+    ajv: {
+        customOptions: {
+            formats: {
+                "name": /\b[A-Za-z]+\b/,
+                "cvv": /^\d{3}$/,
+                "cardNumber": /^\d{16}$/,
+                "cardDate": /^(1[1-2]|0[1-9])\/[2-9][0-9]$/,
+            }
+        }
+    }
+});
 connectToDB().catch(e => console.log(e));
 async function connectToDB() {
     await (0, mongoose_1.connect)(`${process.env.MONGODB_URL}`);

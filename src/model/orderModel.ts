@@ -35,7 +35,7 @@ const orderSchema = new Schema({
         maker: {type: "string", required: true},
         price_mxn: {type: "number", required: true},
         price_usd: {type: "number", required: true},
-        car_type: {type: "string", required: true},
+        car_type: {type: "string", required: false},
         model: {type: "string", required: false},
         purchase: {
             method:{type: "string", required:true},

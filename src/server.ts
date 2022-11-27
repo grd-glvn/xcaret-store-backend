@@ -6,7 +6,20 @@ import cartRoute from "./routes/cartRoutes";
 import orderRoute from "./routes/orderRoutes";
 require('dotenv').config();
 
-const app:FastifyInstance = fastify({logger: true});
+const app:FastifyInstance = fastify({
+    logger: true,
+    ajv: {
+        customOptions: {
+            formats: {
+                "name" : /\b[A-Za-z]+\b/,
+                "cvv": /^\d{3}$/,
+                "cardNumber": /^\d{16}$/,
+                "cardDate": /^(1[1-2]|0[1-9])\/[2-9][0-9]$/,
+            }
+        }
+    }
+
+});
 
 connectToDB().catch( e => console.log(e) )
 
