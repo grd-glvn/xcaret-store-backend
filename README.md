@@ -1,6 +1,6 @@
 ## Backend
 
-Situarse en raiz de backend y ejecutar comando:
+Situarse en folder raíz de backend y ejecutar comando:
 
 ```bash
 npm run dev
