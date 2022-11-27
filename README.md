@@ -2,7 +2,8 @@
 
 Situarse en raiz de backend y ejecutar comando:
 
-```npm run dev
+```bash
+npm run dev
 ```
 Se pueden realizar http request con postman al servidor corriendo en 
 
