@@ -3,6 +3,7 @@ const fastifyCors = require("@fastify/cors")
 import {connect} from "mongoose";
 import carRoute from "./routes/carRoutes";
 import cartRoute from "./routes/cartRoutes";
+import langRoute from "./routes/langRoutes";
 import orderRoute from "./routes/orderRoutes";
 require('dotenv').config();
 
@@ -35,6 +36,7 @@ app.register(fastifyCors, {
 app.register(carRoute)
 app.register(cartRoute)
 app.register(orderRoute)
+app.register(langRoute)
 
 
 
