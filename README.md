@@ -1,6 +1,6 @@
 ## Backend
 
-Situarse en raiz de backedn y ejecutar comando:
+Situarse en raiz de backend y ejecutar comando:
 
 ```npm run dev
 ```
